@@ -5,6 +5,8 @@ plot(temps,mean_slip_fault);
 
 %% Figure 5 : without fluid source
 
+% normal 
+
 Figure;
 subplot(4,2,1)
 pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_0s,'mesh','off','contour','off');
@@ -30,6 +32,32 @@ colormap(jet);
 title('Excess pore pressure (MPa)')
 axis equal 
 
+% reverse 
+
+Figure;
+subplot(4,2,2)
+pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_0s,'mesh','off','contour','off');
+colormap(jet);
+title('Excess pore pressure (MPa)')
+axis equal
+
+subplot(4,2,4)
+pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_30s,'mesh','off','contour','off');
+colormap(jet);
+title('Excess pore pressure (MPa)')
+axis equal 
+
+subplot(4,2,6)
+pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_40s,'mesh','off','contour','off');
+colormap(jet);
+title('Excess pore pressure (MPa)')
+axis equal 
+
+subplot(4,2,8)
+pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_5yr,'mesh','off','contour','off');
+colormap(jet);
+title('Excess pore pressure (MPa)')
+axis equal 
 
 %% Figure 6-7: with fluid source
 
