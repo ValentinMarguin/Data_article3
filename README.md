@@ -4,4 +4,4 @@ Data for the article "Poroelastic effects associated with earthquakes on overpre
 
 The section method in this article describes the numerical models where the data contained in the different folders are generated (i.e., shear stress, fault velocity, etc.)
 
-"Script_Figure.m" file is a Matlab script to draw Figures in the article.
+"script_Figure.m" file is a Matlab script to draw Figures in the article.
