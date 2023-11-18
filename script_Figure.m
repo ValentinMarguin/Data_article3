@@ -76,7 +76,7 @@ subplot(2,2,1)
 pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_0s,'mesh','off','contour','off');
 colormap(jet);
 ylim([-20 0])
-xlim([20 40])
+xlim([20 60])
 caxis([0 20])
 title('Excess pore pressure (MPa)')
 axis equal
@@ -85,7 +85,7 @@ subplot(2,2,2)
 pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_10s,'mesh','off','contour','off');
 colormap(jet);
 ylim([-20 0])
-xlim([20 40])
+xlim([20 60])
 caxis([0 20])
 title('Excess pore pressure (MPa)')
 axis equal 
@@ -94,7 +94,7 @@ subplot(2,2,3)
 pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_20s,'mesh','off','contour','off');
 colormap(jet);
 ylim([-20 0])
-xlim([20 40])
+xlim([20 60])
 caxis([0 20])
 title('Excess pore pressure (MPa)')
 axis equal 
@@ -103,7 +103,7 @@ subplot(2,2,4)
 pdeplot(g_coord_crust,edge,g_num0,'xydata',fluid_pressure_crust_5yr,'mesh','off','contour','off');
 colormap(jet);
 ylim([-20 0])
-xlim([20 40])
+xlim([20 60])
 caxis([0 20])
 title('Excess pore pressure (MPa)')
 axis equal 
@@ -151,7 +151,8 @@ axis equal
 %% figure 8
 
 figure
-surf(position_12,temps,fluid_pressure_12,'EdgeColor','interp'); view(2);colorbar
+surf(position_12,temps_12,fluid_pressure_12,'EdgeColor','interp'); view(2);colorbar
+ylim([-50 50])
 
 %% figure 9
 
@@ -163,14 +164,14 @@ hold on; plot(position_surface,surface_velocity_z(i,:))
 
 %% figure10 
 
-j= 36; %position index (distance between 2 point=0.5 m)
+j= 25; %position index 
 
 figure
 yyaxis left
-plot(temps,surface_displ_z(:,j))
+plot(temps,surface_displ_z(:,j)) % for this figure, the eartquake must be positioned at the time 0 (i.e temps=temps-temps(earthquake))
 
 yyaxis right
-plot(temps,fluid_pressure_12(:,j))
+plot(temps_12,fluid_pressure_12(:,j))
 
 
 
